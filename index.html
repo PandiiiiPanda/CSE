@@ -571,6 +571,7 @@
         .world { min-height: 310px; }
         .sign { min-width: 122px; padding: 10px 8px; font-size: 13px; }
         .recap-world .sign { min-width: 108px; font-size: 12px; }
+        .recap-world .fact-card { width: 28vw; min-width: 92px; }
         .direction.left { left: 8%; }
         .direction.right { right: 8%; }
         #title-screen::after, #end-screen::after { display: none; }
@@ -664,35 +665,16 @@ function clamp(value, min, max) {
 }
 
 function randomizeFactPositions(total) {
-  const slots = [];
+  const positions = [
+    { x: 18, y: 24 }, { x: 18, y: 50 }, { x: 18, y: 76 },
+    { x: 82, y: 24 }, { x: 82, y: 50 }, { x: 82, y: 76 }
+  ];
 
-  for (let i = 0; i < total; i++) {
-    let x = 0, y = 0, attempts = 0;
-
-    do {
-      x = randomBetween(FACT_RECT.left, FACT_RECT.right);
-      y = randomBetween(FACT_RECT.top, FACT_RECT.bottom);
-      attempts++;
-    } while (
-      slots.some(slot => Math.hypot(slot.x - x, slot.y - y) < 18) &&
-      attempts < 220
-    );
-
-    if (attempts >= 220) {
-      const col = i % 3;
-      const row = Math.floor(i / 3);
-      x = 26 + col * 22 + (Math.random() * 8 - 4);
-      y = 24 + row * 20 + (Math.random() * 8 - 4);
-    }
-
-    slots.push({
-      x: clamp(x, FACT_RECT.left + 8, FACT_RECT.right - 8),
-      y: clamp(y, FACT_RECT.top + 8, FACT_RECT.bottom - 8),
-      rotation: (i % 2 === 0 ? -2 : 2)
-    });
-  }
-
-  return slots;
+  return Array.from({ length: total }, (_, i) => ({
+    x: positions[i % positions.length].x,
+    y: positions[i % positions.length].y,
+    rotation: (i % 2 === 0 ? -2 : 2)
+  }));
 }
 
 function ensureRecapLayout() {
