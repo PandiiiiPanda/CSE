@@ -737,6 +737,5 @@ function closeFact(){pendingFact=null;$('modal-backdrop').classList.add('hidden'
 function showEnd(){ $('game').classList.add('hidden');$('end-screen').classList.remove('hidden');$('end-list').innerHTML=FACTS.map(f=>'<li>'+f.title+'</li>').join(''); }
 $('start-button').addEventListener('click',startGame);$('restart-button').addEventListener('click',startGame);$('close-modal').addEventListener('click',closeFact);
 </script>
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" data-cf-beacon='{"version":"2024.11.0","token":"8607d2a720d14b038279025b2b5a82e5","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
