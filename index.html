@@ -27,6 +27,7 @@
       html, body {
         margin: 0;
         min-height: 100%;
+        min-height: 100dvh;
         background:
           radial-gradient(circle at top, rgba(127, 230, 216, 0.12), transparent 26%),
           linear-gradient(180deg, #071118 0%, #0d1b25 36%, #09151b 100%);
@@ -47,6 +48,7 @@
         position: relative;
         width: min(1200px, 100vw);
         min-height: 100vh;
+        min-height: 100dvh;
         overflow: hidden;
         background:
           linear-gradient(180deg, rgba(9, 17, 22, 0.98), rgba(13, 23, 30, 0.96)),
@@ -72,6 +74,7 @@
         align-items: center;
         justify-content: center;
         min-height: 100vh;
+        min-height: 100dvh;
         padding: clamp(24px, 5vw, 72px);
       }
 
@@ -170,6 +173,7 @@
       #game {
         justify-content: flex-start;
         min-height: 100vh;
+        min-height: 100dvh;
         padding: 0;
         background: linear-gradient(180deg, #061017 0%, #11242f 100%);
       }
@@ -228,6 +232,7 @@
         justify-content: space-between;
         width: 100%;
         min-height: calc(100vh - 72px);
+        min-height: calc(100dvh - 72px);
         padding: clamp(34px, 5vh, 64px) 22px 42px;
       }
 
@@ -622,7 +627,6 @@
       </div>
     </main>
 <script>
-'use strict';
 const PATH = [
   { type: 'corridor' },
   { type: 'junction', turn: 'right' },
