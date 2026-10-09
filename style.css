@@ -1,0 +1,26 @@
+body {
+    background-color: #3D0966;
+    color: white;
+}
+
+.txt {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 36px;
+    font-family: oswald, sans-serif;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: roboto, sans-serif;
+}
+
+img {
+    display: block;
+    justify-content: right;
+    align-items: center;
+    margin: 50px auto;
+}
