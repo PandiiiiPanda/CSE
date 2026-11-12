@@ -538,6 +538,10 @@ h2 {
     background: #8a9b9e;
 }
 
+.story-four::before {
+    background: #b89a68;
+}
+
 .story-number {
     display: flex;
     width: 40px;
@@ -561,6 +565,11 @@ h2 {
     color: #536f70;
 }
 
+.story-four .story-number {
+    background: #f0ecdf;
+    color: #806b43;
+}
+
 .story-label {
     margin-bottom: 5px;
     color: #a16a51;
@@ -576,10 +585,10 @@ h3 {
     letter-spacing: -.015em;
 }
 
-.placeholder {
+.other-points-text {
     margin-bottom: 0;
-    color: var(--muted);
-    font-size: 10px;
+    color: #647168;
+    font-size: 11px;
     line-height: 1.5;
 }
 
@@ -736,8 +745,8 @@ h3 {
     }
 
     .intro {
-        padding-top: 20px;
-        padding-bottom: 12px;
+        padding-top: 12px;
+        padding-bottom: 8px;
     }
 
     .intro-copy {
@@ -745,14 +754,14 @@ h3 {
     }
 
     h1 {
-        margin-top: 8px;
-        margin-bottom: 9px;
-        font-size: 46px;
+        margin-top: 5px;
+        margin-bottom: 6px;
+        font-size: 39px;
     }
 
     .intro-text {
-        font-size: 11px;
-        line-height: 1.5;
+        font-size: 10px;
+        line-height: 1.35;
     }
 
     .year-stamp {
@@ -766,15 +775,15 @@ h3 {
     }
 
     .intro-rule {
-        margin-top: 16px;
+        margin-top: 9px;
     }
 
     .section-heading {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
     }
 
     .thank-you {
-        min-height: 58px;
+        min-height: 54px;
         margin-bottom: 8px;
         padding-top: 7px;
         padding-bottom: 7px;
@@ -785,18 +794,18 @@ h3 {
     }
 
     .story-list {
-        gap: 7px;
+        gap: 4px;
     }
 
     .story:not(.financial-story) {
-        min-height: 76px;
-        padding-top: 11px;
-        padding-bottom: 11px;
+        min-height: 0;
+        padding-top: 7px;
+        padding-bottom: 7px;
     }
 
     .financial-story {
-        padding-top: 10px;
-        padding-bottom: 9px;
+        padding-top: 7px;
+        padding-bottom: 6px;
     }
 
     .financial-story h3 {
@@ -805,7 +814,7 @@ h3 {
     }
 
     .financial-topic {
-        padding: 6px 7px 0;
+        padding: 4px 6px 0;
     }
 
     .financial-topic-title {
@@ -815,14 +824,18 @@ h3 {
 
     .financial-summary {
         grid-template-columns: 1fr 1fr;
-        gap: 6px;
-        padding-bottom: 6px;
+        gap: 4px;
+        padding-bottom: 4px;
     }
 
     .financial-summary p {
-        min-height: 48px;
-        padding: 5px 7px;
+        min-height: 36px;
+        padding: 4px 6px;
         font-size: 8px;
+    }
+
+    .story-two .ancv-topic .financial-summary {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .financial-summary strong {
@@ -845,7 +858,7 @@ h3 {
     }
 
     .financial-others {
-        margin-bottom: 6px;
+        margin-bottom: 3px;
     }
 
     .financial-others-title {
@@ -858,7 +871,7 @@ h3 {
 
     .financial-others li {
         gap: 5px;
-        padding: 5px 7px;
+        padding: 4px 6px;
     }
 
     .financial-others li strong {
@@ -874,7 +887,7 @@ h3 {
     }
 
     .podium-list {
-        height: 76px;
+        height: 52px;
     }
 
     .podium-category {
@@ -883,18 +896,28 @@ h3 {
     }
 
     .podium-first .podium-step {
-        height: 37px;
+        height: 26px;
     }
 
     .podium-second .podium-step {
-        height: 27px;
-    }
-
-    .podium-third .podium-step {
         height: 20px;
     }
 
+    .podium-third .podium-step {
+        height: 16px;
+    }
+
     .footer {
-        padding-top: 12px;
+        padding-top: 8px;
+    }
+
+    .other-points-text {
+        font-size: 9px;
+        line-height: 1.35;
+    }
+
+    .story {
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 }
