@@ -720,28 +720,38 @@ h3 {
 
 @page {
     size: A4 portrait;
-    margin: 0;
+    margin: 9mm 15mm;
 }
 
 @media print {
     html,
     body {
-        width: 210mm;
-        height: 297mm;
+        width: auto;
+        height: auto;
         min-height: 0;
         padding: 0;
         background: white;
     }
 
     .report {
-        width: 210mm;
-        height: 297mm;
-        min-height: 0;
+        display: block;
+        width: auto;
+        height: auto;
+        min-height: 279mm;
         margin: 0;
-        padding: 10mm 15mm 8mm;
+        padding: 0;
+        overflow: visible;
         box-shadow: none;
         print-color-adjust: exact;
         -webkit-print-color-adjust: exact;
+    }
+
+    .story-list {
+        display: block;
+    }
+
+    .story {
+        margin-bottom: 4px;
     }
 
     .intro {
@@ -908,6 +918,7 @@ h3 {
     }
 
     .footer {
+        margin-top: 8mm;
         padding-top: 8px;
     }
 
